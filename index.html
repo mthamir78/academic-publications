@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Publication Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Academic Publication Directory</h1>
+        <p id="last-updated">Data loading...</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search publications by title...">
+            <select id="author-filter"><option value="all">All Authors</option></select>
+            <select id="source-filter"><option value="all">All Sources</option></select>
+            <select id="year-filter"><option value="all">All Years</option></select>
+            <button id="sort-button">Sort by Year (Newest)</button>
+        </div>
+        
+        <div class="content-wrapper">
+            <section class="main-content">
+                <h2>Publications</h2>
+                <p id="results-count">Showing 0 publications.</p>
+                <div id="publication-list"></div>
+            </section>
+
+            <aside class="sidebar">
+                <h2>Statistics</h2>
+                <div class="chart-container">
+                    <h3>Publications by Source</h3>
+                    <canvas id="source-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Publications per Year</h3>
+                    <canvas id="year-chart"></canvas>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
